@@ -18,7 +18,10 @@ export default function Header() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const yOffset = window.innerWidth < 768 ? 104 : 136; // altura do header (mobile/desktop)
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset - yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
@@ -56,24 +59,42 @@ export default function Header() {
         {/* Main Header */}
         <div className="container-custom section-padding">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <motion.div
-              className="flex items-center space-x-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-lg">AC</span>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-slate-900">
-                  Autoelétrica Cambui
+            {/* Mobile: logo à esquerda, texto centralizado, menu à direita. Desktop: layout original. */}
+            <div className="flex w-full md:w-auto items-center justify-between md:justify-start">
+              {/* Logo à esquerda */}
+              <motion.div
+                className="flex items-center space-x-3"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
+                  <span className="text-slate-900 font-bold text-lg">AC</span>
+                </div>
+              </motion.div>
+              {/* Texto centralizado no mobile, alinhado à esquerda no desktop */}
+              <div className="flex-1 flex flex-col items-center md:items-start">
+                <h1 className="text-xl font-bold text-slate-900 text-center md:text-left">
+                  Autoelétrica <span className="text-yellow-400">Cambui</span>
                 </h1>
-                <p className="text-xs text-slate-600">
+                <p className="text-xs text-slate-600 text-center md:text-left block">
                   Especialistas em Elétrica Automotiva
                 </p>
               </div>
-            </motion.div>
+              {/* Menu hambúrguer à direita no mobile, escondido no desktop */}
+              <div className="md:hidden flex items-center">
+                <button
+                  className="p-2"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label="Toggle menu"
+                >
+                  {isMenuOpen ? (
+                    <X size={24} className="text-slate-900" />
+                  ) : (
+                    <Menu size={24} className="text-slate-900" />
+                  )}
+                </button>
+              </div>
+            </div>
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => (
@@ -99,18 +120,6 @@ export default function Header() {
             >
               Orçamento
             </motion.button>
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X size={24} className="text-slate-900" />
-              ) : (
-                <Menu size={24} className="text-slate-900" />
-              )}
-            </button>
           </div>
         </div>
         {/* Mobile Menu */}

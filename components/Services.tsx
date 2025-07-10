@@ -113,8 +113,8 @@ export default function Services() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-4">Nossos Serviços</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mb-4 text-lg md:text-3xl">Nossos Serviços</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Oferecemos soluções completas em elétrica automotiva com tecnologia
             avançada e mão de obra especializada para todos os tipos de
             veículos.
@@ -137,19 +137,19 @@ export default function Services() {
                 <service.icon size={48} />
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-xs md:text-gray-600 md:text-base mb-4 leading-relaxed">
                 {service.description}
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-1 md:space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="text-sm text-gray-500 flex items-center"
+                    className="text-xs md:text-sm text-gray-500 flex items-center"
                   >
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
                     {feature}
@@ -158,7 +158,7 @@ export default function Services() {
               </ul>
 
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <button className="text-blue-600 font-semibold hover:text-yellow-500 transition-colors">
+                <button className="text-xs md:text-base text-blue-600 font-semibold hover:text-yellow-500 transition-colors">
                   Saiba mais →
                 </button>
               </div>
@@ -172,7 +172,9 @@ export default function Services() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <button className="btn-primary">Ver Todos os Serviços</button>
+          <button className="btn-primary text-sm md:text-lg">
+            Ver Todos os Serviços
+          </button>
         </motion.div>
       </div>
     </section>

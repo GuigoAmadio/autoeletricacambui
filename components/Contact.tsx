@@ -49,7 +49,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "E-mail",
-      content: "contato@autoeletricacambui.com.br",
+      content: "contato@autoeletrica.com.br",
       description: "Resposta em até 24h",
     },
   ];
@@ -75,8 +75,8 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-4">Entre em Contato</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mb-4 text-lg md:text-3xl">Entre em Contato</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Pronto para resolver o problema elétrico do seu veículo? Entre em
             contato conosco e receba um atendimento personalizado e um orçamento
             sem compromisso.
@@ -91,7 +91,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-6">
                 Solicite seu Orçamento
               </h3>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-xs md:text-sm font-semibold text-gray-700 mb-2"
                     >
                       Nome Completo *
                     </label>
@@ -111,7 +111,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs md:text-base"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-xs md:text-sm font-semibold text-gray-700 mb-2"
                     >
                       Telefone *
                     </label>
@@ -130,7 +130,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs md:text-base"
                       placeholder="(19) 99999-9999"
                     />
                   </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs md:text-sm font-semibold text-gray-700 mb-2"
                   >
                     E-mail *
                   </label>
@@ -150,7 +150,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs md:text-base"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="service"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs md:text-sm font-semibold text-gray-700 mb-2"
                   >
                     Serviço de Interesse
                   </label>
@@ -167,7 +167,7 @@ export default function Contact() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs md:text-base"
                   >
                     <option value="">Selecione um serviço</option>
                     {services.map((service, index) => (
@@ -181,7 +181,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs md:text-sm font-semibold text-gray-700 mb-2"
                   >
                     Mensagem *
                   </label>
@@ -192,7 +192,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-vertical"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-vertical text-xs md:text-base"
                     placeholder="Descreva o problema do seu veículo ou tire suas dúvidas..."
                   ></textarea>
                 </div>
@@ -222,7 +222,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-6">
                 Outras Formas de Contato
               </h3>
               <p className="text-gray-600 mb-8">
@@ -248,13 +248,13 @@ export default function Contact() {
                   </div>
 
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
+                    <h4 className="text-base md:text-lg font-bold text-gray-900 mb-1">
                       {method.title}
                     </h4>
                     <p className="text-blue-600 font-semibold mb-1">
                       {method.content}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       {method.description}
                     </p>
                   </div>

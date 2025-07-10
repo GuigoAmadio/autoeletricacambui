@@ -39,8 +39,8 @@ export default function Location() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-4">Nossa Localização</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mb-4 text-lg md:text-3xl">Nossa Localização</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Estamos estrategicamente localizados no Cambui, facilitando o acesso
             para clientes de toda a região de Campinas e cidades vizinhas.
           </p>
@@ -59,7 +59,7 @@ export default function Location() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="mx-auto mb-4 text-blue-600" size={64} />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2">
                     Autoelétrica Cambui
                   </h3>
                   <p className="text-gray-600">Mapa interativo em breve</p>
@@ -106,12 +106,12 @@ export default function Location() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-xs md:text-base text-gray-600 mb-4 leading-relaxed">
                       {item.content}
                     </p>
 
                     {item.action && (
-                      <button className="text-blue-600 font-semibold hover:text-yellow-500 transition-colors flex items-center">
+                      <button className="text-xs md:text-base text-blue-600 font-semibold hover:text-yellow-500 transition-colors flex items-center">
                         {item.action}
                         <Navigation className="ml-2" size={16} />
                       </button>
@@ -128,11 +128,11 @@ export default function Location() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <button className="btn-primary w-full">
+              <button className="btn-primary w-full text-sm md:text-lg">
                 <Navigation className="mr-2" size={20} />
                 Como Chegar
               </button>
-              <button className="btn-secondary w-full">
+              <button className="btn-secondary w-full text-sm md:text-lg">
                 <Phone className="mr-2" size={20} />
                 Ligar Agora
               </button>
@@ -145,10 +145,10 @@ export default function Location() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <h4 className="font-bold text-gray-900 mb-2">
+              <h4 className="font-bold text-gray-900 mb-2 text-base md:text-lg">
                 💡 Dica Importante
               </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                 Oferecemos <strong>estacionamento gratuito</strong> em frente à
                 oficina e atendimento por ordem de chegada. Para serviços mais
                 complexos, recomendamos agendar pelo telefone.

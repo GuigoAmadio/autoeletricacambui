@@ -46,9 +46,11 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="mb-6">Sobre a Autoelétrica Cambui</h2>
+            <h2 className="mb-6 text-lg md:text-3xl">
+              Sobre a Autoelétrica Cambui
+            </h2>
 
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed">
               <p>
                 Há mais de duas décadas, a{" "}
                 <strong className="text-gray-900">Autoelétrica Cambui</strong> é
@@ -101,15 +103,17 @@ export default function About() {
                   <stat.icon size={40} />
                 </div>
 
-                <div className="text-3xl font-bold text-gray-900 mb-2">
+                <div className="text-lg md:text-3xl font-bold text-gray-900 mb-2">
                   {stat.number}
                 </div>
 
-                <div className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="text-base md:text-lg font-semibold text-gray-900 mb-2">
                   {stat.label}
                 </div>
 
-                <div className="text-sm text-gray-600">{stat.description}</div>
+                <div className="text-xs md:text-sm text-gray-600">
+                  {stat.description}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -123,10 +127,10 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-6">
               Nossa Missão
             </h3>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-base md:text-xl text-gray-600 leading-relaxed">
               &quot;Oferecer soluções completas e confiáveis em elétrica
               automotiva, combinando experiência, tecnologia e atendimento
               personalizado para superar as expectativas de nossos
