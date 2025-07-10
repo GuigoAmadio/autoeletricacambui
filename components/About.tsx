@@ -56,14 +56,12 @@ export default function About() {
                 experiência e dedicação garantem soluções eficazes para todos os
                 tipos de veículos.
               </p>
-
               <p>
                 Combinamos tradição familiar com tecnologia de ponta, oferecendo
                 diagnósticos precisos e reparos duradouros. Nossa equipe
                 especializada está sempre atualizada com as mais recentes
                 inovações do setor automotivo.
               </p>
-
               <p>
                 Valorizamos a confiança de nossos clientes e trabalhamos com
                 transparência, oferecendo orçamentos claros e prazos realistas.
@@ -129,9 +127,10 @@ export default function About() {
               Nossa Missão
             </h3>
             <p className="text-xl text-gray-600 leading-relaxed">
-              "Oferecer soluções completas e confiáveis em elétrica automotiva,
-              combinando experiência, tecnologia e atendimento personalizado
-              para superar as expectativas de nossos clientes."
+              &quot;Oferecer soluções completas e confiáveis em elétrica
+              automotiva, combinando experiência, tecnologia e atendimento
+              personalizado para superar as expectativas de nossos
+              clientes.&quot;
             </p>
           </div>
         </motion.div>
